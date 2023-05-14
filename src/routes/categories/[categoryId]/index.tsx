@@ -124,7 +124,7 @@ export default component$(() => {
       <ul>
         {questions.value.questions.map((question) => (
           <li key={question.id} class="mb-6 mt-3">
-            <div class="mb-3 text-2xl font-bold">{question.question}</div>
+            <h2 class="mb-6 text-2xl font-bold">{question.question}</h2>
             <Answers
               question={question}
               answers={question.answers}

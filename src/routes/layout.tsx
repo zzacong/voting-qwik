@@ -29,8 +29,9 @@ export default component$(() => {
   return (
     <>
       <Header />
-      <main class="px-4">
-        <div class="gap-6 md:grid md:grid-cols-4">
+
+      <main class="px-4 py-6">
+        <div class="gap-6 md:grid md:grid-cols-6">
           <div class="col-span-1 flex flex-col">
             <Link
               href="/"
@@ -54,7 +55,7 @@ export default component$(() => {
             ))}
           </div>
 
-          <div class="col-span-3">
+          <div class="col-span-5">
             <Slot />
           </div>
         </div>

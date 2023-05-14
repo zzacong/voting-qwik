@@ -17,15 +17,17 @@ export default component$(() => {
         <li key={category.id} class="p-2">
           <Link href={`/categories/${category.id}`}>
             <div class="card glass w-full">
-              <figure>
-                <img
-                  width={500}
-                  height={200}
-                  src={`/${category.image}`}
-                  alt={category.name}
-                  class="object-contain"
-                />
-              </figure>
+              {category.image && (
+                <figure>
+                  <img
+                    width={500}
+                    height={200}
+                    src={`/${category.image}`}
+                    alt={category.name}
+                    class="object-contain"
+                  />
+                </figure>
+              )}
               <div class="card-body">
                 <h2 class="card-title">{category.name}</h2>
                 <div class="card-actions justify-end">

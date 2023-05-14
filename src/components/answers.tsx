@@ -1,4 +1,9 @@
-import { component$, type PropFunction, type Signal } from '@builder.io/qwik';
+import {
+  component$,
+  Fragment,
+  type PropFunction,
+  type Signal,
+} from '@builder.io/qwik';
 import { type Answer, type Question } from '@prisma/client';
 
 import { type VoteTally } from '~/types';
@@ -29,7 +34,7 @@ const Answers = component$(
             ?.reduce((acc, { count }) => acc + (count ?? 0), 0);
 
           return (
-            <>
+            <Fragment key={answer.id}>
               <div class="col-span-4">{answer.answer}</div>
               <div class="col-span-3 flex justify-center">
                 {loggedIn && (
@@ -41,17 +46,17 @@ const Answers = component$(
                   </button>
                 )}
               </div>
-              <div class="col-span-3">
+              <div class="col-span-4">
                 <progress
                   class="progress progress-error w-full"
                   value={Math.round((votes / totalVotes) * 100) || 0}
                   max="100"
                 ></progress>
               </div>
-              <div class="col-span-2">
+              <div class="col-span-1">
                 <span class="font-mono">{votes} votes</span>
               </div>
-            </>
+            </Fragment>
           );
         })}
       </div>
