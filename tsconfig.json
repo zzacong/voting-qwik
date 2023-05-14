@@ -21,6 +21,6 @@
       "~/*": ["./src/*"]
     }
   },
-  "files": ["./.eslintrc.cjs"],
+  "files": ["./.eslintrc.cjs", "./prisma/seed.ts"],
   "include": ["src", "**/*.cjs", "./*.d.ts"]
 }
