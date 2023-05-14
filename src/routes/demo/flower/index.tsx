@@ -1,4 +1,9 @@
-import { component$, useVisibleTask$, useStore, useStylesScoped$ } from '@builder.io/qwik';
+import {
+  component$,
+  useVisibleTask$,
+  useStore,
+  useStylesScoped$,
+} from '@builder.io/qwik';
 import { type DocumentHead, useLocation } from '@builder.io/qwik-city';
 import styles from './flower.css?inline';
 
@@ -20,7 +25,7 @@ export default component$(() => {
   });
 
   return (
-    <div class="container container-center">
+    <div class="container-center container">
       <div role="presentation" class="ellipsis"></div>
       <h1>
         <span class="highlight">Generate</span> Flowers
